@@ -9,6 +9,9 @@
 import Foundation
 import SQLite3
 
+/**
+    Errors
+ */
 enum Errors: Error {
     case cantCreateConnection(String)
     case unknownError
@@ -28,21 +31,43 @@ class SQLiteWrappers {
     private static var database: OpaquePointer? = nil
     
     /**
-     Creates a connection
+     A flag state whether there's an active database connection.
+     */
+    private static var connected: Bool = false
+    
+    /**
+        Creates a connection to the directory and filename specified
+        by the fileURL input.
+     
+     **Effects:** Creates a database given the fileURL if one doesn't exists, or opens
+                  an existing database with the given fileURL.
+     
+     - Parameter fileURL: the address to save the database or where to read the data from.
      */
     public static func createConnection(fileURL: URL) throws {
         let connection = sqlite3_open(fileURL.path, &database)
         if connection != SQLITE_OK {
+            connected = false
             throw Errors.cantCreateConnection("Can't create connection: \(connection)")
-        } else {
-            
         }
+        connected = true
     }
     
     /**
-        Closes a connection.
+     Prepares the database for querying.
      */
+    private static func prepare() {
+        sqlite3_prepare
+    }
     
+    
+    /**
+        Closes the connection.
+     */
+    public static func closeConnection() {
+        connected = (sqlite3_close(database) == SQLITE_BUSY) ? false : true
+        print(connected)
+    }
 }
 
 
