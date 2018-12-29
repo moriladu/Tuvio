@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SQLite3
 
 /**
  An immutable data wrapper for a user.
@@ -37,17 +38,37 @@ public class TuvioUsers {
      */
     public static let DATA = TuvioUsers()
     
-    //
     // Abstraction Function: TuvioUsers reads and writes users data onto the
-    // permanent storage.
+    //                       permanent storage.
     //
     // Rep Invariant: The total number of users must equal the size of the sqlite table.
     
     /**
-     Checks the truth of the rep invariant.
+        Checks the truth of the rep invariant.
      */
-    private func checkRep() {
-        assert(true) // find a way to store
+    private func checkRep() { assert(true) }
+    
+    /**
+        The database connection.
+     */
+    var dataBase: OpaquePointer?
+    
+    /**
+        creates a database connection.
+     */
+    private init() {
+        do {
+            let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let fileURL = documentDirectory.appendingPathComponent("TuvioUsers.sqlite3")
+            
+            if sqlite3_open(fileURL.path, &dataBase) != SQLITE_OK {
+                
+            }
+            
+        } catch {
+            print(error)
+        }
+        checkRep()
     }
     
 }

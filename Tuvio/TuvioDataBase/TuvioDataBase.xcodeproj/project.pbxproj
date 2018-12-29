@@ -7,63 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD5BA23F21D6D754004023C0 /* TuvioUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */; };
-		CD5BA28921D6E069004023C0 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5BA27F21D6E01D004023C0 /* SQLite.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		CD5A761F21D6EE4100634B6C /* SQLite3Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */; };
+		CD5BA28B21D6EB9E004023C0 /* TuvioUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */; };
 		CDAD300421D6C81D00273470 /* TuvioDataBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAD2FFA21D6C81D00273470 /* TuvioDataBase.framework */; };
 		CDAD300921D6C81D00273470 /* TuvioDataBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD300821D6C81D00273470 /* TuvioDataBaseTests.swift */; };
 		CDAD300B21D6C81D00273470 /* TuvioDataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = CDAD2FFD21D6C81D00273470 /* TuvioDataBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CD5BA27A21D6E01D004023C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
-			remoteInfo = "SQLite iOS";
-		};
-		CD5BA27C21D6E01D004023C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
-			remoteInfo = "SQLiteTests iOS";
-		};
-		CD5BA27E21D6E01D004023C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
-			remoteInfo = "SQLite Mac";
-		};
-		CD5BA28021D6E01D004023C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
-			remoteInfo = "SQLiteTests Mac";
-		};
-		CD5BA28221D6E01D004023C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
-			remoteInfo = "SQLite tvOS";
-		};
-		CD5BA28421D6E01D004023C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
-			remoteInfo = "SQLiteTests tvOS";
-		};
-		CD5BA28621D6E01D004023C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A121AC451CA35C79005A31D1;
-			remoteInfo = "SQLite watchOS";
-		};
 		CDAD300521D6C81D00273470 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDAD2FF121D6C81D00273470 /* Project object */;
@@ -74,8 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLite3Wrappers.swift; sourceTree = "<group>"; };
 		CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioUsers.swift; sourceTree = "<group>"; };
-		CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		CDAD2FFA21D6C81D00273470 /* TuvioDataBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioDataBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAD2FFD21D6C81D00273470 /* TuvioDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuvioDataBase.h; sourceTree = "<group>"; };
 		CDAD2FFE21D6C81D00273470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5BA28921D6E069004023C0 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,35 +54,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD5BA27121D6E01D004023C0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CD5BA27B21D6E01D004023C0 /* SQLite.framework */,
-				CD5BA27D21D6E01D004023C0 /* SQLiteTests iOS.xctest */,
-				CD5BA27F21D6E01D004023C0 /* SQLite.framework */,
-				CD5BA28121D6E01D004023C0 /* SQLiteTests Mac.xctest */,
-				CD5BA28321D6E01D004023C0 /* SQLite.framework */,
-				CD5BA28521D6E01D004023C0 /* SQLiteTests tvOS.xctest */,
-				CD5BA28721D6E01D004023C0 /* SQLite.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CD5BA28821D6E069004023C0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CDAD2FF021D6C81D00273470 = {
 			isa = PBXGroup;
 			children = (
 				CDAD2FFC21D6C81D00273470 /* TuvioDataBase */,
 				CDAD300721D6C81D00273470 /* TuvioDataBaseTests */,
 				CDAD2FFB21D6C81D00273470 /* Products */,
-				CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */,
-				CD5BA28821D6E069004023C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +75,7 @@
 		CDAD2FFC21D6C81D00273470 /* TuvioDataBase */ = {
 			isa = PBXGroup;
 			children = (
+				CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */,
 				CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */,
 				CDAD2FFE21D6C81D00273470 /* Info.plist */,
 				CDAD2FFD21D6C81D00273470 /* TuvioDataBase.h */,
@@ -243,12 +171,6 @@
 			mainGroup = CDAD2FF021D6C81D00273470;
 			productRefGroup = CDAD2FFB21D6C81D00273470 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CD5BA27121D6E01D004023C0 /* Products */;
-					ProjectRef = CD5BA27021D6E01D004023C0 /* SQLite.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CDAD2FF921D6C81D00273470 /* TuvioDataBase */,
@@ -256,58 +178,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CD5BA27B21D6E01D004023C0 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = CD5BA27A21D6E01D004023C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5BA27D21D6E01D004023C0 /* SQLiteTests iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests iOS.xctest";
-			remoteRef = CD5BA27C21D6E01D004023C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5BA27F21D6E01D004023C0 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = CD5BA27E21D6E01D004023C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5BA28121D6E01D004023C0 /* SQLiteTests Mac.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests Mac.xctest";
-			remoteRef = CD5BA28021D6E01D004023C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5BA28321D6E01D004023C0 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = CD5BA28221D6E01D004023C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5BA28521D6E01D004023C0 /* SQLiteTests tvOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests tvOS.xctest";
-			remoteRef = CD5BA28421D6E01D004023C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5BA28721D6E01D004023C0 /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = CD5BA28621D6E01D004023C0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CDAD2FF821D6C81D00273470 /* Resources */ = {
@@ -331,7 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5BA23F21D6D754004023C0 /* TuvioUsers.swift in Sources */,
+				CD5BA28B21D6EB9E004023C0 /* TuvioUsers.swift in Sources */,
+				CD5A761F21D6EE4100634B6C /* SQLite3Wrappers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
