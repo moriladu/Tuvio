@@ -1,15 +1,15 @@
 //
-//  TuvioDataBaseTests.swift
-//  TuvioDataBaseTests
+//  TuvioSQLiteTableTests.swift
+//  TuvioSQLiteTableTests
 //
-//  Created by 20eml5 on 12/28/18.
+//  Created by 20eml5 on 12/30/18.
 //  Copyright © 2018 20eml5. All rights reserved.
 //
 
 import XCTest
-@testable import TuvioDataBase
+@testable import TuvioSQLiteTable
 
-class TuvioDataBaseTests: XCTestCase {
+class TuvioSQLiteTableTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

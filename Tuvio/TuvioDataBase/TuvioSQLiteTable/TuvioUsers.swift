@@ -29,7 +29,7 @@ public struct TuvioUser {
 /**
  A platform to connect to a database from which user data are derived and written to.
  
- Abstract State: TuvioUsers contains references to the actual sqlite table
+ **Abstract State:** TuvioUsers contains references to the actual sqlite table
                  stored on the permanent disc of the device.
  */
 public class TuvioUsers {

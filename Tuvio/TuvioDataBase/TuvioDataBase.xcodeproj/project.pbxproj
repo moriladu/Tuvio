@@ -7,58 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD5A761F21D6EE4100634B6C /* SQLite3Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */; };
-		CD5BA28B21D6EB9E004023C0 /* TuvioUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */; };
-		CDAD300421D6C81D00273470 /* TuvioDataBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAD2FFA21D6C81D00273470 /* TuvioDataBase.framework */; };
-		CDAD300921D6C81D00273470 /* TuvioDataBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD300821D6C81D00273470 /* TuvioDataBaseTests.swift */; };
-		CDAD300B21D6C81D00273470 /* TuvioDataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = CDAD2FFD21D6C81D00273470 /* TuvioDataBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD92867021D98D9000F82DD5 /* TuvioSQLiteTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD92866721D98D9000F82DD5 /* TuvioSQLiteTable.framework */; };
+		CD92867521D98D9000F82DD5 /* TuvioSQLiteTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92867421D98D9000F82DD5 /* TuvioSQLiteTableTests.swift */; };
+		CD92867721D98D9000F82DD5 /* TuvioSQLiteTable.h in Headers */ = {isa = PBXBuildFile; fileRef = CD92866921D98D9000F82DD5 /* TuvioSQLiteTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD92867E21D98DBB00F82DD5 /* SQLite3Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */; };
+		CD92867F21D98DBF00F82DD5 /* TuvioUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */; };
+		CD92868121D98DC900F82DD5 /* SQLiteWrappersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92866021D9734D00F82DD5 /* SQLiteWrappersTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CDAD300521D6C81D00273470 /* PBXContainerItemProxy */ = {
+		CD92867121D98D9000F82DD5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDAD2FF121D6C81D00273470 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CDAD2FF921D6C81D00273470;
-			remoteInfo = TuvioDataBase;
+			remoteGlobalIDString = CD92866621D98D9000F82DD5;
+			remoteInfo = TuvioSQLiteTable;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLite3Wrappers.swift; sourceTree = "<group>"; };
 		CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioUsers.swift; sourceTree = "<group>"; };
-		CDAD2FFA21D6C81D00273470 /* TuvioDataBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioDataBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDAD2FFD21D6C81D00273470 /* TuvioDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuvioDataBase.h; sourceTree = "<group>"; };
-		CDAD2FFE21D6C81D00273470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDAD300321D6C81D00273470 /* TuvioDataBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuvioDataBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDAD300821D6C81D00273470 /* TuvioDataBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioDataBaseTests.swift; sourceTree = "<group>"; };
-		CDAD300A21D6C81D00273470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD92866021D9734D00F82DD5 /* SQLiteWrappersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteWrappersTests.swift; sourceTree = "<group>"; };
+		CD92866721D98D9000F82DD5 /* TuvioSQLiteTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioSQLiteTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD92866921D98D9000F82DD5 /* TuvioSQLiteTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuvioSQLiteTable.h; sourceTree = "<group>"; };
+		CD92866A21D98D9000F82DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD92866F21D98D9000F82DD5 /* TuvioSQLiteTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuvioSQLiteTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD92867421D98D9000F82DD5 /* TuvioSQLiteTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioSQLiteTableTests.swift; sourceTree = "<group>"; };
+		CD92867621D98D9000F82DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CDAD2FF621D6C81D00273470 /* Frameworks */ = {
+		CD92866321D98D9000F82DD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDAD300021D6C81D00273470 /* Frameworks */ = {
+		CD92866C21D98D9000F82DD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAD300421D6C81D00273470 /* TuvioDataBase.framework in Frameworks */,
+				CD92867021D98D9000F82DD5 /* TuvioSQLiteTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD92866821D98D9000F82DD5 /* TuvioSQLiteTable */ = {
+			isa = PBXGroup;
+			children = (
+				CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */,
+				CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */,
+				CD92866921D98D9000F82DD5 /* TuvioSQLiteTable.h */,
+				CD92866A21D98D9000F82DD5 /* Info.plist */,
+			);
+			path = TuvioSQLiteTable;
+			sourceTree = "<group>";
+		};
+		CD92867321D98D9000F82DD5 /* TuvioSQLiteTableTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD92867421D98D9000F82DD5 /* TuvioSQLiteTableTests.swift */,
+				CD92866021D9734D00F82DD5 /* SQLiteWrappersTests.swift */,
+				CD92867621D98D9000F82DD5 /* Info.plist */,
+			);
+			path = TuvioSQLiteTableTests;
+			sourceTree = "<group>";
+		};
 		CDAD2FF021D6C81D00273470 = {
 			isa = PBXGroup;
 			children = (
-				CDAD2FFC21D6C81D00273470 /* TuvioDataBase */,
-				CDAD300721D6C81D00273470 /* TuvioDataBaseTests */,
+				CD92866821D98D9000F82DD5 /* TuvioSQLiteTable */,
+				CD92867321D98D9000F82DD5 /* TuvioSQLiteTableTests */,
 				CDAD2FFB21D6C81D00273470 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,80 +89,60 @@
 		CDAD2FFB21D6C81D00273470 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDAD2FFA21D6C81D00273470 /* TuvioDataBase.framework */,
-				CDAD300321D6C81D00273470 /* TuvioDataBaseTests.xctest */,
+				CD92866721D98D9000F82DD5 /* TuvioSQLiteTable.framework */,
+				CD92866F21D98D9000F82DD5 /* TuvioSQLiteTableTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CDAD2FFC21D6C81D00273470 /* TuvioDataBase */ = {
-			isa = PBXGroup;
-			children = (
-				CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */,
-				CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */,
-				CDAD2FFE21D6C81D00273470 /* Info.plist */,
-				CDAD2FFD21D6C81D00273470 /* TuvioDataBase.h */,
-			);
-			path = TuvioDataBase;
-			sourceTree = "<group>";
-		};
-		CDAD300721D6C81D00273470 /* TuvioDataBaseTests */ = {
-			isa = PBXGroup;
-			children = (
-				CDAD300821D6C81D00273470 /* TuvioDataBaseTests.swift */,
-				CDAD300A21D6C81D00273470 /* Info.plist */,
-			);
-			path = TuvioDataBaseTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CDAD2FF721D6C81D00273470 /* Headers */ = {
+		CD92866421D98D9000F82DD5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAD300B21D6C81D00273470 /* TuvioDataBase.h in Headers */,
+				CD92867721D98D9000F82DD5 /* TuvioSQLiteTable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CDAD2FF921D6C81D00273470 /* TuvioDataBase */ = {
+		CD92866621D98D9000F82DD5 /* TuvioSQLiteTable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDAD300E21D6C81D00273470 /* Build configuration list for PBXNativeTarget "TuvioDataBase" */;
+			buildConfigurationList = CD92867821D98D9000F82DD5 /* Build configuration list for PBXNativeTarget "TuvioSQLiteTable" */;
 			buildPhases = (
-				CDAD2FF521D6C81D00273470 /* Sources */,
-				CDAD2FF621D6C81D00273470 /* Frameworks */,
-				CDAD2FF721D6C81D00273470 /* Headers */,
-				CDAD2FF821D6C81D00273470 /* Resources */,
+				CD92866221D98D9000F82DD5 /* Sources */,
+				CD92866321D98D9000F82DD5 /* Frameworks */,
+				CD92866421D98D9000F82DD5 /* Headers */,
+				CD92866521D98D9000F82DD5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TuvioDataBase;
-			productName = TuvioDataBase;
-			productReference = CDAD2FFA21D6C81D00273470 /* TuvioDataBase.framework */;
+			name = TuvioSQLiteTable;
+			productName = TuvioSQLiteTable;
+			productReference = CD92866721D98D9000F82DD5 /* TuvioSQLiteTable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CDAD300221D6C81D00273470 /* TuvioDataBaseTests */ = {
+		CD92866E21D98D9000F82DD5 /* TuvioSQLiteTableTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDAD301121D6C81D00273470 /* Build configuration list for PBXNativeTarget "TuvioDataBaseTests" */;
+			buildConfigurationList = CD92867B21D98D9000F82DD5 /* Build configuration list for PBXNativeTarget "TuvioSQLiteTableTests" */;
 			buildPhases = (
-				CDAD2FFF21D6C81D00273470 /* Sources */,
-				CDAD300021D6C81D00273470 /* Frameworks */,
-				CDAD300121D6C81D00273470 /* Resources */,
+				CD92866B21D98D9000F82DD5 /* Sources */,
+				CD92866C21D98D9000F82DD5 /* Frameworks */,
+				CD92866D21D98D9000F82DD5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CDAD300621D6C81D00273470 /* PBXTargetDependency */,
+				CD92867221D98D9000F82DD5 /* PBXTargetDependency */,
 			);
-			name = TuvioDataBaseTests;
-			productName = TuvioDataBaseTests;
-			productReference = CDAD300321D6C81D00273470 /* TuvioDataBaseTests.xctest */;
+			name = TuvioSQLiteTableTests;
+			productName = TuvioSQLiteTableTests;
+			productReference = CD92866F21D98D9000F82DD5 /* TuvioSQLiteTableTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -152,11 +155,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = 20eml5;
 				TargetAttributes = {
-					CDAD2FF921D6C81D00273470 = {
+					CD92866621D98D9000F82DD5 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
 					};
-					CDAD300221D6C81D00273470 = {
+					CD92866E21D98D9000F82DD5 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -173,21 +175,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDAD2FF921D6C81D00273470 /* TuvioDataBase */,
-				CDAD300221D6C81D00273470 /* TuvioDataBaseTests */,
+				CD92866621D98D9000F82DD5 /* TuvioSQLiteTable */,
+				CD92866E21D98D9000F82DD5 /* TuvioSQLiteTableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CDAD2FF821D6C81D00273470 /* Resources */ = {
+		CD92866521D98D9000F82DD5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDAD300121D6C81D00273470 /* Resources */ = {
+		CD92866D21D98D9000F82DD5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,34 +199,131 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CDAD2FF521D6C81D00273470 /* Sources */ = {
+		CD92866221D98D9000F82DD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5BA28B21D6EB9E004023C0 /* TuvioUsers.swift in Sources */,
-				CD5A761F21D6EE4100634B6C /* SQLite3Wrappers.swift in Sources */,
+				CD92867F21D98DBF00F82DD5 /* TuvioUsers.swift in Sources */,
+				CD92867E21D98DBB00F82DD5 /* SQLite3Wrappers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDAD2FFF21D6C81D00273470 /* Sources */ = {
+		CD92866B21D98D9000F82DD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAD300921D6C81D00273470 /* TuvioDataBaseTests.swift in Sources */,
+				CD92868121D98DC900F82DD5 /* SQLiteWrappersTests.swift in Sources */,
+				CD92867521D98D9000F82DD5 /* TuvioSQLiteTableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CDAD300621D6C81D00273470 /* PBXTargetDependency */ = {
+		CD92867221D98D9000F82DD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CDAD2FF921D6C81D00273470 /* TuvioDataBase */;
-			targetProxy = CDAD300521D6C81D00273470 /* PBXContainerItemProxy */;
+			target = CD92866621D98D9000F82DD5 /* TuvioSQLiteTable */;
+			targetProxy = CD92867121D98D9000F82DD5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CD92867921D98D9000F82DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TuvioSQLiteTable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioSQLiteTable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		CD92867A21D98D9000F82DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TuvioSQLiteTable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioSQLiteTable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		CD92867C21D98D9000F82DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TuvioSQLiteTableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioSQLiteTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		CD92867D21D98D9000F82DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TuvioSQLiteTableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioSQLiteTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		CDAD300C21D6C81D00273470 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,119 +444,32 @@
 			};
 			name = Release;
 		};
-		CDAD300F21D6C81D00273470 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TuvioDataBase/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioDataBase;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CDAD301021D6C81D00273470 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TuvioDataBase/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioDataBase;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		CDAD301221D6C81D00273470 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TuvioDataBaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioDataBaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CDAD301321D6C81D00273470 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TuvioDataBaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioDataBaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD92867821D98D9000F82DD5 /* Build configuration list for PBXNativeTarget "TuvioSQLiteTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD92867921D98D9000F82DD5 /* Debug */,
+				CD92867A21D98D9000F82DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD92867B21D98D9000F82DD5 /* Build configuration list for PBXNativeTarget "TuvioSQLiteTableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD92867C21D98D9000F82DD5 /* Debug */,
+				CD92867D21D98D9000F82DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CDAD2FF421D6C81D00273470 /* Build configuration list for PBXProject "TuvioDataBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDAD300C21D6C81D00273470 /* Debug */,
 				CDAD300D21D6C81D00273470 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDAD300E21D6C81D00273470 /* Build configuration list for PBXNativeTarget "TuvioDataBase" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDAD300F21D6C81D00273470 /* Debug */,
-				CDAD301021D6C81D00273470 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDAD301121D6C81D00273470 /* Build configuration list for PBXNativeTarget "TuvioDataBaseTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDAD301221D6C81D00273470 /* Debug */,
-				CDAD301321D6C81D00273470 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
