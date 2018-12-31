@@ -139,7 +139,12 @@ class SQLiteWrappers {
     
     /**
      Inserts a new row to the table.
+     
+     - Parameter row: the row to insert to the database table.
      */
+    public static func addEntry(row: TuvioUser) {
+        // finish this function. and add tests.
+    }
     
     
     
