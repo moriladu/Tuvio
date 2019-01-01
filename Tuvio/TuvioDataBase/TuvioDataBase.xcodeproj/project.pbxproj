@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4F399021DACBB80034BD95 /* SQLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F398F21DACBB80034BD95 /* SQLGenerator.swift */; };
 		CD92867021D98D9000F82DD5 /* TuvioSQLiteTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD92866721D98D9000F82DD5 /* TuvioSQLiteTable.framework */; };
 		CD92867521D98D9000F82DD5 /* TuvioSQLiteTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92867421D98D9000F82DD5 /* TuvioSQLiteTableTests.swift */; };
 		CD92867721D98D9000F82DD5 /* TuvioSQLiteTable.h in Headers */ = {isa = PBXBuildFile; fileRef = CD92866921D98D9000F82DD5 /* TuvioSQLiteTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD92867E21D98DBB00F82DD5 /* SQLite3Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */; };
-		CD92867F21D98DBF00F82DD5 /* TuvioUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */; };
+		CD92867F21D98DBF00F82DD5 /* DataBaseEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BA23E21D6D754004023C0 /* DataBaseEntries.swift */; };
 		CD92868121D98DC900F82DD5 /* SQLiteWrappersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92866021D9734D00F82DD5 /* SQLiteWrappersTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD4F398F21DACBB80034BD95 /* SQLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLGenerator.swift; sourceTree = "<group>"; };
 		CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLite3Wrappers.swift; sourceTree = "<group>"; };
-		CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioUsers.swift; sourceTree = "<group>"; };
+		CD5BA23E21D6D754004023C0 /* DataBaseEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseEntries.swift; sourceTree = "<group>"; };
 		CD92866021D9734D00F82DD5 /* SQLiteWrappersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteWrappersTests.swift; sourceTree = "<group>"; };
 		CD92866721D98D9000F82DD5 /* TuvioSQLiteTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioSQLiteTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD92866921D98D9000F82DD5 /* TuvioSQLiteTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuvioSQLiteTable.h; sourceTree = "<group>"; };
@@ -60,7 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */,
-				CD5BA23E21D6D754004023C0 /* TuvioUsers.swift */,
+				CD4F398F21DACBB80034BD95 /* SQLGenerator.swift */,
+				CD5BA23E21D6D754004023C0 /* DataBaseEntries.swift */,
 				CD92866921D98D9000F82DD5 /* TuvioSQLiteTable.h */,
 				CD92866A21D98D9000F82DD5 /* Info.plist */,
 			);
@@ -203,7 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD92867F21D98DBF00F82DD5 /* TuvioUsers.swift in Sources */,
+				CD4F399021DACBB80034BD95 /* SQLGenerator.swift in Sources */,
+				CD92867F21D98DBF00F82DD5 /* DataBaseEntries.swift in Sources */,
 				CD92867E21D98DBB00F82DD5 /* SQLite3Wrappers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

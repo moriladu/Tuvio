@@ -35,7 +35,6 @@ public class SQLiteWrappersTests: XCTestCase {
     func testOpenConnection() {
         XCTAssertNoThrow(try! openFileURL())
         XCTAssertNoThrow(try SQLiteWrappers.createConnection(fileURL: fileURL!))
+        XCTAssertNoThrow(try SQLiteWrappers.prepareConnection(tableName: "mori", columns: [:]))
     }
-    
-    
 }

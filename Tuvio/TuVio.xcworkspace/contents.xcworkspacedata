@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ServerMonitor/ServerMonitor.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TuvioDataBase/TuvioDataBase.xcodeproj">
    </FileRef>
    <FileRef

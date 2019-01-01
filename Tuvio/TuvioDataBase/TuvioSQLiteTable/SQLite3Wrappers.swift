@@ -57,11 +57,6 @@ public enum SQLiteTypes: String {
  */
 class SQLiteWrappers {
     /**
-     Constants for creating a new table, if one doesn't exists.
-     */
-    private static let createTable = "CREATE TABLE IF NOT EXISTS"
-    
-    /**
      A database connection to be have.
      */
     private static var database: OpaquePointer? = nil
@@ -70,6 +65,11 @@ class SQLiteWrappers {
      A flag state whether there's an active database connection.
      */
     private static var connected: Bool = false
+    
+    /**
+     The name of the sql table open.
+     */
+    private static var TABLE_NAME: String?
     
     /**
         Creates a connection to the directory and filename specified
@@ -98,22 +98,18 @@ class SQLiteWrappers {
      - Parameter tableName: what to name the new table.
      */
     public static func prepareConnection(tableName: String, columns: [String: String]) throws {
+        assert(connected, "Connection is not opened!!")
         let valid = checkDataTypes(dataTypes: Array(columns.values))
-        if !(connected) {
-            throw Errors.connectionNotOpened("THERE IS NO OPEN CONNECTION!")
-        } else if !(valid) {
+        if !(valid) {
             throw Errors.unknownError("AN INCORRECT DATATYPE IS ENTERRED!")
         } else {
-            var sqlStatement = createTable + " " + tableName + " ("
-            for column in columns {
-                sqlStatement = column.key + " " + column.value + ", "
-            }
-            sqlStatement = sqlStatement + ")"
+            let sqlStatement = SQLGenerator.getCreateTableStatement(for: tableName, with: columns)
             
             if sqlite3_exec(database, sqlStatement, nil, nil, nil) != SQLITE_OK {
                 let errorMsg = String(cString: sqlite3_errmsg(database)!)
                 throw Errors.unknownError(errorMsg)
             }
+            self.TABLE_NAME = tableName
         }
     }
     
@@ -142,8 +138,10 @@ class SQLiteWrappers {
      
      - Parameter row: the row to insert to the database table.
      */
-    public static func addEntry(row: TuvioUser) {
-        // finish this function. and add tests.
+    public static func addEntry(row: DataBaseEntry) {
+        assert(connected)
+        let insertStatement = SQLGenerator.getInsertStatement(for: TABLE_NAME!, entry: row)
+        
     }
     
     
@@ -152,7 +150,7 @@ class SQLiteWrappers {
         Closes the connection.
      */
     public static func closeConnection() {
-        connected = (sqlite3_close(database) == SQLITE_BUSY) ? false : true
+        connected = (sqlite3_close(database) == SQLITE_BUSY)
         print(connected)
     }
 }

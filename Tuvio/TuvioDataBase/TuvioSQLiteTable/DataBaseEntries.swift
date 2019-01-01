@@ -15,15 +15,21 @@ import SQLite3
  Abstract State: Contains User name, IP_ADDRESS, age, unique address, and other
                 informations.
  */
+public class DataBaseEntry {
+    // SQLite column names and corresponding values.
+    private var parameters: String = ""
+    private var values: String = ""
 
-public struct TuvioUser {
     /**
-     Information on a user.
+     Initializes an entry with a statement to create it.
      */
-    let name: String
-    let age: Int8
-    let IP_ADDRESS: String
-    let uniqueAddress: String
+    public init(name: String, age: Int8, ipAddress: String, uniqueAddress: String) {
+        self.parameters = "NAME, AGE, IP_ADDRESS, UNIGUE ADDRESS"
+        self.values = "\(name), \(age), \(ipAddress), \(uniqueAddress)"
+    }
+    
+    func getParameters() -> String { return parameters }
+    func getValues() -> String { return values }
 }
 
 /**
@@ -32,11 +38,11 @@ public struct TuvioUser {
  **Abstract State:** TuvioUsers contains references to the actual sqlite table
                  stored on the permanent disc of the device.
  */
-public class TuvioUsers {
+public class DataBaseEntries {
     /**
      A Singleton instance for all users.
      */
-    public static let DATA = TuvioUsers()
+    public static let DATA = DataBaseEntries()
     
     // Abstraction Function: TuvioUsers reads and writes users data onto the
     //                       permanent storage.
@@ -49,22 +55,16 @@ public class TuvioUsers {
     private func checkRep() { assert(true) }
     
     /**
-        The database connection.
-     */
-    var dataBase: OpaquePointer?
-    
-    /**
         creates a database connection.
      */
     private init() {
         do {
-            let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let documentDirectory = try FileManager.default.url(for: .documentDirectory,
+                                                                in: .userDomainMask,
+                                                                appropriateFor: nil,
+                                                                create: true)
             let fileURL = documentDirectory.appendingPathComponent("TuvioUsers.sqlite3")
-            
-            if sqlite3_open(fileURL.path, &dataBase) != SQLITE_OK {
-                
-            }
-            
+            try SQLiteWrappers.createConnection(fileURL: fileURL)
         } catch {
             print(error)
         }
