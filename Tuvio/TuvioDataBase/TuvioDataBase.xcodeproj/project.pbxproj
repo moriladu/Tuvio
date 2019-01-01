@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CD4F399021DACBB80034BD95 /* SQLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F398F21DACBB80034BD95 /* SQLGenerator.swift */; };
+		CD4F39A921DB76DD0034BD95 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4F39A821DB76DD0034BD95 /* libsqlite3.tbd */; };
+		CD4F39AC21DB77150034BD95 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4F39AB21DB77150034BD95 /* libsqlite3.0.tbd */; };
 		CD92867021D98D9000F82DD5 /* TuvioSQLiteTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD92866721D98D9000F82DD5 /* TuvioSQLiteTable.framework */; };
 		CD92867521D98D9000F82DD5 /* TuvioSQLiteTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92867421D98D9000F82DD5 /* TuvioSQLiteTableTests.swift */; };
 		CD92867721D98D9000F82DD5 /* TuvioSQLiteTable.h in Headers */ = {isa = PBXBuildFile; fileRef = CD92866921D98D9000F82DD5 /* TuvioSQLiteTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD92867E21D98DBB00F82DD5 /* SQLite3Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */; };
+		CD92867E21D98DBB00F82DD5 /* SQLiteWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A761E21D6EE4100634B6C /* SQLiteWrappers.swift */; };
 		CD92867F21D98DBF00F82DD5 /* DataBaseEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BA23E21D6D754004023C0 /* DataBaseEntries.swift */; };
 		CD92868121D98DC900F82DD5 /* SQLiteWrappersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92866021D9734D00F82DD5 /* SQLiteWrappersTests.swift */; };
 /* End PBXBuildFile section */
@@ -28,7 +30,9 @@
 
 /* Begin PBXFileReference section */
 		CD4F398F21DACBB80034BD95 /* SQLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLGenerator.swift; sourceTree = "<group>"; };
-		CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLite3Wrappers.swift; sourceTree = "<group>"; };
+		CD4F39A821DB76DD0034BD95 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		CD4F39AB21DB77150034BD95 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/lib/libsqlite3.0.tbd; sourceTree = DEVELOPER_DIR; };
+		CD5A761E21D6EE4100634B6C /* SQLiteWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteWrappers.swift; sourceTree = "<group>"; };
 		CD5BA23E21D6D754004023C0 /* DataBaseEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseEntries.swift; sourceTree = "<group>"; };
 		CD92866021D9734D00F82DD5 /* SQLiteWrappersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteWrappersTests.swift; sourceTree = "<group>"; };
 		CD92866721D98D9000F82DD5 /* TuvioSQLiteTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioSQLiteTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4F39AC21DB77150034BD95 /* libsqlite3.0.tbd in Frameworks */,
+				CD4F39A921DB76DD0034BD95 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,10 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD4F39A721DB76DD0034BD95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD4F39AB21DB77150034BD95 /* libsqlite3.0.tbd */,
+				CD4F39A821DB76DD0034BD95 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD92866821D98D9000F82DD5 /* TuvioSQLiteTable */ = {
 			isa = PBXGroup;
 			children = (
-				CD5A761E21D6EE4100634B6C /* SQLite3Wrappers.swift */,
+				CD5A761E21D6EE4100634B6C /* SQLiteWrappers.swift */,
 				CD4F398F21DACBB80034BD95 /* SQLGenerator.swift */,
 				CD5BA23E21D6D754004023C0 /* DataBaseEntries.swift */,
 				CD92866921D98D9000F82DD5 /* TuvioSQLiteTable.h */,
@@ -86,6 +101,7 @@
 				CD92866821D98D9000F82DD5 /* TuvioSQLiteTable */,
 				CD92867321D98D9000F82DD5 /* TuvioSQLiteTableTests */,
 				CDAD2FFB21D6C81D00273470 /* Products */,
+				CD4F39A721DB76DD0034BD95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,7 +224,7 @@
 			files = (
 				CD4F399021DACBB80034BD95 /* SQLGenerator.swift in Sources */,
 				CD92867F21D98DBF00F82DD5 /* DataBaseEntries.swift in Sources */,
-				CD92867E21D98DBB00F82DD5 /* SQLite3Wrappers.swift in Sources */,
+				CD92867E21D98DBB00F82DD5 /* SQLiteWrappers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

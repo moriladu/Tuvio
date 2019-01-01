@@ -23,10 +23,15 @@ class SQLGenerator {
      */
     static func getCreateTableStatement(for table: String, with entries: [String:String]) -> String {
         var sqlStatement = "CREATE TABLE IF NOT EXISTS " + table + " ("
+        var count = 0
         for column in entries {
-            sqlStatement = column.key + " " + column.value + ", "
+            if (count != (entries.count - 1)) {
+                sqlStatement = sqlStatement + column.key + " " + column.value + ", "
+            } else {
+                sqlStatement = sqlStatement + column.key + " " + column.value + ");"
+            }
+            count = count + 1
         }
-        sqlStatement = sqlStatement + ")"
         return sqlStatement
     }
     
@@ -37,7 +42,7 @@ class SQLGenerator {
      // modify a way to get the parameter
      */
     static func getInsertStatement(for table: String, entry: DataBaseEntry) -> String {
-        let insertStatement = "INSERT INTO \(table) \(entry.getParameters()) VALUES \(entry.getValues())"
+        let insertStatement = "INSERT INTO \(table) (\(entry.getParameters())) VALUES (\(entry.getValues()))"
         
         return insertStatement
     }

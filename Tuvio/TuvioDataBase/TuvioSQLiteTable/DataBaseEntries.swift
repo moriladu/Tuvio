@@ -16,6 +16,14 @@ import SQLite3
                 informations.
  */
 public class DataBaseEntry {
+    /**
+     Parameter names.
+     */
+    public static let np = "Name"
+    public static let age = "Age"
+    public static let ip = "IP_Address"
+    public static let id = "uniqueAddress"
+    
     // SQLite column names and corresponding values.
     private var parameters: String = ""
     private var values: String = ""
@@ -23,8 +31,8 @@ public class DataBaseEntry {
     /**
      Initializes an entry with a statement to create it.
      */
-    public init(name: String, age: Int8, ipAddress: String, uniqueAddress: String) {
-        self.parameters = "NAME, AGE, IP_ADDRESS, UNIGUE ADDRESS"
+    public init(name: String, age: Int, ipAddress: String, uniqueAddress: String) {
+        self.parameters = "\(DataBaseEntry.np), \(DataBaseEntry.age), \(DataBaseEntry.ip), \(DataBaseEntry.id)"
         self.values = "\(name), \(age), \(ipAddress), \(uniqueAddress)"
     }
     
@@ -65,11 +73,43 @@ public class DataBaseEntries {
                                                                 create: true)
             let fileURL = documentDirectory.appendingPathComponent("TuvioUsers.sqlite3")
             try SQLiteWrappers.createConnection(fileURL: fileURL)
+            
+            let columns: [String: String] = [
+                DataBaseEntry.np: SQLiteTypes.String.rawValue,
+                DataBaseEntry.age: SQLiteTypes.Int.rawValue,
+                DataBaseEntry.ip: SQLiteTypes.String.rawValue,
+                DataBaseEntry.id: SQLiteTypes.String.rawValue
+            ]
+            try SQLiteWrappers.prepareConnection(tableName: "StupidShit", columns: columns)
         } catch {
             print(error)
         }
         checkRep()
     }
     
+    public func addEntry(entry: DataBaseEntry) {
+        do {
+            try SQLiteWrappers.addEntry(row: entry)
+        } catch {
+            print(error)
+        }
+    }
+    
+    public func listEntries() {
+        do {
+            let entries = try SQLiteWrappers.readTable()
+            for entry in entries {
+                var row: String = ""
+                let parameters = entry.getParameters().components(separatedBy: ", ")
+                let values = entry.getValues().components(separatedBy: ", ")
+                for i in 0..<values.count {
+                    row = row + "\(parameters[i]) = \(values[i]) "
+                }
+                print(row)
+            }
+        } catch {
+            print(error)
+        }
+    }
 }
 

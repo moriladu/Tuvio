@@ -46,14 +46,14 @@ public enum SQLiteTypes: String {
  functions.
  
  Here's how to create a database table:
-```
+ ```
  - First open a connection, by giving the address to where a table should be save.
  
  - Prepare the connection, by giving the names to the columns
  
-```
+ ```
  **Abstract State:** SQLite3Wrappers contains a bunch of functions to wrap
-                 C functionalities for swift compatibility.
+ C functionalities for swift compatibility.
  */
 class SQLiteWrappers {
     /**
@@ -69,18 +69,18 @@ class SQLiteWrappers {
     /**
      The name of the sql table open.
      */
-    private static var TABLE_NAME: String?
+    private static var TABLE_NAME: String!
     
     /**
-        Creates a connection to the directory and filename specified
-        by the fileURL input.
+     Creates a connection to the directory and filename specified
+     by the fileURL input.
      
      **Effects:** Creates a database given the fileURL if one doesn't exists, or opens
-                  an existing database with the given fileURL.
+     an existing database with the given fileURL.
      
      - Parameter fileURL: the address to save the database or where to read the data from.
      */
-    public static func createConnection(fileURL: URL) throws {
+    static func createConnection(fileURL: URL) throws {
         if (sqlite3_open(fileURL.path, &database) != SQLITE_OK) {
             let errMsg = String(cString: sqlite3_errmsg(database))
             throw Errors.cantCreateConnection("CAN'T CREATE CONNECTION: \(errMsg)")
@@ -97,7 +97,7 @@ class SQLiteWrappers {
      - Parameter columns: a dictionary that maps the name of columns to their data types.
      - Parameter tableName: what to name the new table.
      */
-    public static func prepareConnection(tableName: String, columns: [String: String]) throws {
+    static func prepareConnection(tableName: String, columns: [String: String]) throws {
         assert(connected, "Connection is not opened!!")
         let valid = checkDataTypes(dataTypes: Array(columns.values))
         if !(valid) {
@@ -116,6 +116,8 @@ class SQLiteWrappers {
     /**
      A helper method for the prepareConnection function; helps to make sure all data types
      are valid syntaxes.
+     
+     - Parameter dataTypes: specifies the supported data types.
      */
     private static func checkDataTypes(dataTypes: [String]) -> Bool {
         let valid = (dataTypes.count > 1)
@@ -138,19 +140,98 @@ class SQLiteWrappers {
      
      - Parameter row: the row to insert to the database table.
      */
-    public static func addEntry(row: DataBaseEntry) {
+    static func addEntry(row: DataBaseEntry) throws {
         assert(connected)
         let insertStatement = SQLGenerator.getInsertStatement(for: TABLE_NAME!, entry: row)
+        var stmt: OpaquePointer?
+
+        //preparing the query
+        if sqlite3_prepare(database, insertStatement, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(database)!)
+            throw Errors.unknownError(errmsg)
+        }
+
+        let values = row.getValues().components(separatedBy: ", ")
         
+        for i in 0..<values.count {
+            //binding the parameters
+            if let digit = Int32(values[i]) {
+                if sqlite3_bind_int(stmt, Int32(i + 1), digit) != SQLITE_OK{
+                    let errmsg = String(cString: sqlite3_errmsg(database)!)
+                    throw Errors.unknownError("failure binding name: \(errmsg)")
+                }
+            } else {
+                if sqlite3_bind_text(stmt, Int32(i + 1), values[i], -1, nil) != SQLITE_OK{
+                    let errmsg = String(cString: sqlite3_errmsg(database)!)
+                    throw Errors.unknownError("failure binding name: \(errmsg)")
+                }
+            }
+        }
+        
+        //executing the query to insert values
+        if sqlite3_step(stmt) != SQLITE_DONE {
+            let errmsg = String(cString: sqlite3_errmsg(database)!)
+            throw Errors.unknownError("Error in Inserting: \(errmsg)")
+        }
     }
     
-    
+    /**
+     Deletes an entry from the table.
+     
+     - Parameter entry: the entry to delete
+     */
+    static func deleteEntry(entry: DataBaseEntry) throws {
+        let deleteStatement = SQLGenerator.getDeleteStatement(for: TABLE_NAME, entry: entry)
+        var stmt: OpaquePointer? = nil
+        if sqlite3_prepare_v2(database, deleteStatement, -1, &stmt, nil) == SQLITE_OK {
+            if sqlite3_step(stmt) != SQLITE_DONE {
+                let errmsg = String(cString: sqlite3_errmsg(database))
+                throw Errors.unknownError("Could not delete row: \(errmsg)")
+            }
+        } else {
+            let errmsg = String(cString: sqlite3_errmsg(database))
+            throw Errors.unknownError("DELETE statement could not be prepared: \(errmsg)")
+        }
+        
+        sqlite3_finalize(stmt)
+    }
     
     /**
-        Closes the connection.
+     Traverses through the table and read the values out.
+     */
+    static func readTable()  throws -> [DataBaseEntry] {
+        assert(connected)
+        //this is our select query
+        let queryString = "SELECT * FROM \(TABLE_NAME)"
+        
+        //statement pointer
+        var stmt:OpaquePointer?
+        
+        //preparing the query
+        if sqlite3_prepare(database, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(database)!)
+            throw Errors.unknownError(errmsg)
+        }
+        // list of all entries.
+        var entries: [DataBaseEntry] = []
+        
+        //traversing through all the records
+        while(sqlite3_step(stmt) == SQLITE_ROW){
+            let name = String(cString: sqlite3_column_text(stmt, 0))
+            let age = Int(sqlite3_column_int(stmt, 1))
+            let ip = String(cString: sqlite3_column_text(stmt, 2))
+            let address = String(cString: sqlite3_column_text(stmt, 3))
+            
+            //adding values to list
+            entries.append(DataBaseEntry(name: name, age: age, ipAddress: ip, uniqueAddress: address))
+        }
+        return entries
+    }
+    
+    /**
+     Closes the connection.
      */
     public static func closeConnection() {
         connected = (sqlite3_close(database) == SQLITE_BUSY)
-        print(connected)
     }
 }
