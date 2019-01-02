@@ -40,6 +40,7 @@ class SQLGenerator {
      Gets the sql statement for inserting a new entry to the database.
      
      // modify a way to get the parameter
+     I dont know if this actually works.
      */
     static func getInsertStatement(for table: String, entry: DataBaseEntry) -> String {
         let insertStatement = "INSERT INTO \(table) (\(entry.getParameters())) VALUES (\(entry.getValues()))"

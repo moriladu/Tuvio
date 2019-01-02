@@ -101,15 +101,19 @@ class SQLiteWrappers {
         assert(connected, "Connection is not opened!!")
         let valid = checkDataTypes(dataTypes: Array(columns.values))
         if !(valid) {
-            throw Errors.unknownError("AN INCORRECT DATATYPE IS ENTERRED!")
+            throw Errors.unknownError("Incorrect Data type is enterred!")
         } else {
             let sqlStatement = SQLGenerator.getCreateTableStatement(for: tableName, with: columns)
-            
-            if sqlite3_exec(database, sqlStatement, nil, nil, nil) != SQLITE_OK {
-                let errorMsg = String(cString: sqlite3_errmsg(database)!)
-                throw Errors.unknownError(errorMsg)
+            var stmt: OpaquePointer? = nil
+            if sqlite3_prepare_v2(database, sqlStatement, -1, &stmt, nil) == SQLITE_OK {
+                if sqlite3_step(stmt) != SQLITE_DONE {
+                    throw Errors.unknownError("Contact table could not be created!")
+                }
+                self.TABLE_NAME = tableName
+            } else {
+                throw Errors.unknownError("Can't prepare the database for table creation!")
             }
-            self.TABLE_NAME = tableName
+            sqlite3_finalize(stmt)
         }
     }
     
@@ -143,7 +147,7 @@ class SQLiteWrappers {
     static func addEntry(row: DataBaseEntry) throws {
         assert(connected)
         let insertStatement = SQLGenerator.getInsertStatement(for: TABLE_NAME!, entry: row)
-        var stmt: OpaquePointer?
+        var stmt: OpaquePointer? = nil
 
         //preparing the query
         if sqlite3_prepare(database, insertStatement, -1, &stmt, nil) != SQLITE_OK{
@@ -173,6 +177,8 @@ class SQLiteWrappers {
             let errmsg = String(cString: sqlite3_errmsg(database)!)
             throw Errors.unknownError("Error in Inserting: \(errmsg)")
         }
+        
+        sqlite3_finalize(stmt)
     }
     
     /**
@@ -202,7 +208,7 @@ class SQLiteWrappers {
     static func readTable()  throws -> [DataBaseEntry] {
         assert(connected)
         //this is our select query
-        let queryString = "SELECT * FROM \(TABLE_NAME)"
+        let queryString = "SELECT * FROM \(String(describing: TABLE_NAME))"
         
         //statement pointer
         var stmt:OpaquePointer?
@@ -225,6 +231,7 @@ class SQLiteWrappers {
             //adding values to list
             entries.append(DataBaseEntry(name: name, age: age, ipAddress: ip, uniqueAddress: address))
         }
+        sqlite3_finalize(stmt)
         return entries
     }
     
