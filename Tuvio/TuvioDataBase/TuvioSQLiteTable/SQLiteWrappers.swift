@@ -208,7 +208,7 @@ class SQLiteWrappers {
     static func readTable()  throws -> [DataBaseEntry] {
         assert(connected)
         //this is our select query
-        let queryString = "SELECT * FROM \(String(describing: TABLE_NAME))"
+        let queryString = "SELECT * FROM " + TABLE_NAME
         
         //statement pointer
         var stmt:OpaquePointer?

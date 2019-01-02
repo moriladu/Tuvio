@@ -43,7 +43,7 @@ class SQLGenerator {
      I dont know if this actually works.
      */
     static func getInsertStatement(for table: String, entry: DataBaseEntry) -> String {
-        let insertStatement = "INSERT INTO \(table) (\(entry.getParameters())) VALUES (\(entry.getValues()))"
+        let insertStatement = "INSERT INTO \(table) (\(entry.getParameters())) VALUES (?, ?, ?, ?);"
         
         return insertStatement
     }

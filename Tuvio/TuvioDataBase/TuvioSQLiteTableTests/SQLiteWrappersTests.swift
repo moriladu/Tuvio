@@ -39,8 +39,8 @@ public class SQLiteWrappersTests: XCTestCase {
     }
     
     func testRandom() {
-        let user1 = DataBaseEntry(name: "Mori", age: 22, ipAddress: "908.38.458.341", uniqueAddress: "Wilias9384cb")
-        let user2 = DataBaseEntry(name: "David", age: 6, ipAddress: "908.38.458.341", uniqueAddress: "Juba9384cb")
+        let user1 = DataBaseEntry(name: "Wani", age: 76, ipAddress: "908.38.458.341", uniqueAddress: "Wilias9384cb")
+        let user2 = DataBaseEntry(name: "Morbe", age: 98, ipAddress: "89.00.0998.8", uniqueAddress: "Juba9384cb")
         
         DataBaseEntries.DATA.addEntry(entry: user1)
         DataBaseEntries.DATA.addEntry(entry: user2)
