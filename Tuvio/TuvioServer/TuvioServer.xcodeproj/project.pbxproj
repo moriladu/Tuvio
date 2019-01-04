@@ -53,8 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD5D4F4821E00F1A0083DE96 /* BlueSocket.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = BlueSocket.xcworkspace; path = ../../../../Documents/BlueSocket/BlueSocket.xcworkspace; sourceTree = "<group>"; };
-		CD5D4F4A21E014A60083DE96 /* BlueSocket */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BlueSocket; path = ../../../../Documents/BlueSocket; sourceTree = "<group>"; };
 		CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueSocket.xcodeproj; path = "../../../../Downloads/BlueSocket-master/BlueSocket.xcodeproj"; sourceTree = "<group>"; };
 		CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioServer.swift; sourceTree = "<group>"; };
 		CDAD2FD621D6C76800273470 /* TuvioServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */,
-				CD5D4F4A21E014A60083DE96 /* BlueSocket */,
-				CD5D4F4821E00F1A0083DE96 /* BlueSocket.xcworkspace */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
