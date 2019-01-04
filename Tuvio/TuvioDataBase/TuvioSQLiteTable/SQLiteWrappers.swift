@@ -97,9 +97,9 @@ class SQLiteWrappers {
      - Parameter columns: a dictionary that maps the name of columns to their data types.
      - Parameter tableName: what to name the new table.
      */
-    static func prepareConnection(tableName: String, columns: [String: String]) throws {
+    static func prepareConnection(tableName: String, columns: [(String, String)]) throws {
         assert(connected, "Connection is not opened!!")
-        let valid = checkDataTypes(dataTypes: Array(columns.values))
+        let valid = checkDataTypes(dataTypes: columns)
         if !(valid) {
             throw Errors.unknownError("Incorrect Data type is enterred!")
         } else {
@@ -123,10 +123,10 @@ class SQLiteWrappers {
      
      - Parameter dataTypes: specifies the supported data types.
      */
-    private static func checkDataTypes(dataTypes: [String]) -> Bool {
+    private static func checkDataTypes(dataTypes: [(String, String)]) -> Bool {
         let valid = (dataTypes.count > 1)
         for type in dataTypes {
-            switch type {
+            switch type.1 {
             case SQLiteTypes.Nil.rawValue,
                  SQLiteTypes.Int.rawValue,
                  SQLiteTypes.Double.rawValue,
@@ -148,24 +148,26 @@ class SQLiteWrappers {
         assert(connected)
         let insertStatement = SQLGenerator.getInsertStatement(for: TABLE_NAME!, entry: row)
         var stmt: OpaquePointer? = nil
-
+        
         //preparing the query
         if sqlite3_prepare(database, insertStatement, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(database)!)
             throw Errors.unknownError(errmsg)
         }
-
-        let values = row.getValues().components(separatedBy: ", ")
+        
+        let values = row.values.components(separatedBy: ", ")
         
         for i in 0..<values.count {
             //binding the parameters
+            let n = i + 1
             if let digit = Int32(values[i]) {
-                if sqlite3_bind_int(stmt, Int32(i + 1), digit) != SQLITE_OK{
+                if sqlite3_bind_int(stmt, Int32(n), digit) != SQLITE_OK{
                     let errmsg = String(cString: sqlite3_errmsg(database)!)
                     throw Errors.unknownError("failure binding name: \(errmsg)")
                 }
             } else {
-                if sqlite3_bind_text(stmt, Int32(i + 1), values[i], -1, nil) != SQLITE_OK{
+                let value = NSString(string: values[i])
+                if sqlite3_bind_text(stmt, Int32(n), value.utf8String, -1, nil) != SQLITE_OK{
                     let errmsg = String(cString: sqlite3_errmsg(database)!)
                     throw Errors.unknownError("failure binding name: \(errmsg)")
                 }
@@ -211,7 +213,7 @@ class SQLiteWrappers {
         let queryString = "SELECT * FROM " + TABLE_NAME
         
         //statement pointer
-        var stmt:OpaquePointer?
+        var stmt:OpaquePointer? = nil
         
         //preparing the query
         if sqlite3_prepare(database, queryString, -1, &stmt, nil) != SQLITE_OK{
@@ -223,13 +225,14 @@ class SQLiteWrappers {
         
         //traversing through all the records
         while(sqlite3_step(stmt) == SQLITE_ROW){
-            let name = String(cString: sqlite3_column_text(stmt, 0))
-            let age = Int(sqlite3_column_int(stmt, 1))
-            let ip = String(cString: sqlite3_column_text(stmt, 2))
-            let address = String(cString: sqlite3_column_text(stmt, 3))
+            let id = Int(sqlite3_column_int(stmt, 0))
+            let name = String(cString: sqlite3_column_text(stmt, 1))
+            let age = Int(sqlite3_column_int(stmt, 2))
+            let ipAddress = String(cString: sqlite3_column_text(stmt, 3))
+            let uniqueAddress = String(cString: sqlite3_column_text(stmt, 4))
             
             //adding values to list
-            entries.append(DataBaseEntry(name: name, age: age, ipAddress: ip, uniqueAddress: address))
+            entries.append(DataBaseEntry(id: id, name: name, age: age, ipAddress: ipAddress, uniqueAddress: uniqueAddress))
         }
         sqlite3_finalize(stmt)
         return entries

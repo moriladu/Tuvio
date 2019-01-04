@@ -21,14 +21,14 @@ class SQLGenerator {
      - Parameter columns: a dictionary that maps the name of columns to their data types.
      - Parameter tableName: what to name the new table.
      */
-    static func getCreateTableStatement(for table: String, with entries: [String:String]) -> String {
-        var sqlStatement = "CREATE TABLE IF NOT EXISTS " + table + " ("
+    static func getCreateTableStatement(for table: String, with entries: [(String, String)]) -> String {
+        var sqlStatement = "CREATE TABLE IF NOT EXISTS " + table + " (id INTEGER PRIMARY KEY AUTOINCREMENT, "
         var count = 0
         for column in entries {
             if (count != (entries.count - 1)) {
-                sqlStatement = sqlStatement + column.key + " " + column.value + ", "
+                sqlStatement = sqlStatement + column.0 + " " + column.1 + ", "
             } else {
-                sqlStatement = sqlStatement + column.key + " " + column.value + ");"
+                sqlStatement = sqlStatement + column.0 + " " + column.1 + ");"
             }
             count = count + 1
         }
@@ -43,7 +43,7 @@ class SQLGenerator {
      I dont know if this actually works.
      */
     static func getInsertStatement(for table: String, entry: DataBaseEntry) -> String {
-        let insertStatement = "INSERT INTO \(table) (\(entry.getParameters())) VALUES (?, ?, ?, ?);"
+        let insertStatement = "INSERT INTO \(table) (\(entry.parameters)) VALUES (?, ?, ?, ?);"
         
         return insertStatement
     }
@@ -52,22 +52,22 @@ class SQLGenerator {
      Gets an sql statement for deleting an existing row in a database.
      */
     static func getDeleteStatement(for table: String, entry: DataBaseEntry) -> String {
-        let parameters = entry.getParameters().components(separatedBy: ", ")
-        let values = entry.getValues().components(separatedBy: ", ")
+        let parameters = entry.parameters.components(separatedBy: ", ")
+        let values = entry.values.components(separatedBy: ", ")
         
         assert(values.count == parameters.count)
-        
-        var condition: String?
+
+        var condition: String = ""
         
         for i in 0..<values.count {
-            if (condition != nil) {
-                condition = condition! + " AND \(parameters[i]) = \(values[i])"
+            if condition.count > 0 {
+                condition = condition + " AND \(parameters[i]) == '\(values[i])'"
             } else {
-                condition = "\(parameters[i]) = \(values[i]) "
+                condition = "\(parameters[i]) == '\(values[i])'"
             }
         }
         
-        let deleteStatement = "DELETE FROM \(table) WHERE \(condition ?? "FALSE");"
+        let deleteStatement = "DELETE FROM \(table) WHERE \(condition);"
         return deleteStatement
     }
 }

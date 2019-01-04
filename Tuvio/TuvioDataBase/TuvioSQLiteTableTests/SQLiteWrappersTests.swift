@@ -35,15 +35,17 @@ public class SQLiteWrappersTests: XCTestCase {
     func testOpenConnection() {
         XCTAssertNoThrow(try! openFileURL())
         XCTAssertNoThrow(try SQLiteWrappers.createConnection(fileURL: fileURL!))
-        XCTAssertNoThrow(try SQLiteWrappers.prepareConnection(tableName: "mori", columns: [:]))
+        XCTAssertNoThrow(try SQLiteWrappers.prepareConnection(tableName: "mori", columns: []))
     }
     
     func testRandom() {
-        let user1 = DataBaseEntry(name: "Wani", age: 76, ipAddress: "908.38.458.341", uniqueAddress: "Wilias9384cb")
-        let user2 = DataBaseEntry(name: "Morbe", age: 98, ipAddress: "89.00.0998.8", uniqueAddress: "Juba9384cb")
+        let user1 = DataBaseEntry(id: 0, name: "Kevin Durant", age: 8, ipAddress: "0.2.123.878", uniqueAddress: "01267 MA")
+        let user2 = DataBaseEntry(id: 1, name: "Klay Thompson", age: 22, ipAddress: "01.002.036.785", uniqueAddress: "Osborn Juba")
+//        DataBaseEntries.DATA.addEntry(entry: user1)
+//        DataBaseEntries.DATA.addEntry(entry: user2)
+        DataBaseEntries.DATA.listEntries()
         
-        DataBaseEntries.DATA.addEntry(entry: user1)
-        DataBaseEntries.DATA.addEntry(entry: user2)
+        DataBaseEntries.DATA.deleteEntry(entry: user2)
         DataBaseEntries.DATA.listEntries()
     }
 }
