@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD16165B21E0201300BBC50C /* TuvioMacOSServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD16165221E0201300BBC50C /* TuvioMacOSServer.framework */; };
+		CD16166021E0201300BBC50C /* TuvioMacOSServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16165F21E0201300BBC50C /* TuvioMacOSServerTests.swift */; };
+		CD16166221E0201300BBC50C /* TuvioMacOSServer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD16165421E0201300BBC50C /* TuvioMacOSServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD816D5821DEE2B000EE5A47 /* TuvioServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */; };
 		CDAD2FE021D6C76800273470 /* TuvioServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAD2FD621D6C76800273470 /* TuvioServer.framework */; };
 		CDAD2FE521D6C76800273470 /* TuvioServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD2FE421D6C76800273470 /* TuvioServerTests.swift */; };
@@ -14,6 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CD16165C21E0201300BBC50C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDAD2FCD21D6C76800273470 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD16165121E0201300BBC50C;
+			remoteInfo = TuvioMacOSServer;
+		};
 		CDAD2FE121D6C76800273470 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDAD2FCD21D6C76800273470 /* Project object */;
@@ -24,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD16165221E0201300BBC50C /* TuvioMacOSServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioMacOSServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD16165421E0201300BBC50C /* TuvioMacOSServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuvioMacOSServer.h; sourceTree = "<group>"; };
+		CD16165521E0201300BBC50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD16165A21E0201300BBC50C /* TuvioMacOSServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuvioMacOSServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD16165F21E0201300BBC50C /* TuvioMacOSServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioMacOSServerTests.swift; sourceTree = "<group>"; };
+		CD16166121E0201300BBC50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioServer.swift; sourceTree = "<group>"; };
 		CDAD2FD621D6C76800273470 /* TuvioServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAD2FD921D6C76800273470 /* TuvioServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuvioServer.h; sourceTree = "<group>"; };
@@ -34,6 +50,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CD16164E21E0201300BBC50C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD16165721E0201300BBC50C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD16165B21E0201300BBC50C /* TuvioMacOSServer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDAD2FD221D6C76800273470 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +83,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD16165321E0201300BBC50C /* TuvioMacOSServer */ = {
+			isa = PBXGroup;
+			children = (
+				CD16165421E0201300BBC50C /* TuvioMacOSServer.h */,
+				CD16165521E0201300BBC50C /* Info.plist */,
+			);
+			path = TuvioMacOSServer;
+			sourceTree = "<group>";
+		};
+		CD16165E21E0201300BBC50C /* TuvioMacOSServerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD16165F21E0201300BBC50C /* TuvioMacOSServerTests.swift */,
+				CD16166121E0201300BBC50C /* Info.plist */,
+			);
+			path = TuvioMacOSServerTests;
+			sourceTree = "<group>";
+		};
 		CD5D4F4721E00F1A0083DE96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +113,8 @@
 			children = (
 				CDAD2FD821D6C76800273470 /* TuvioServer */,
 				CDAD2FE321D6C76800273470 /* TuvioServerTests */,
+				CD16165321E0201300BBC50C /* TuvioMacOSServer */,
+				CD16165E21E0201300BBC50C /* TuvioMacOSServerTests */,
 				CDAD2FD721D6C76800273470 /* Products */,
 				CD5D4F4721E00F1A0083DE96 /* Frameworks */,
 			);
@@ -74,6 +125,8 @@
 			children = (
 				CDAD2FD621D6C76800273470 /* TuvioServer.framework */,
 				CDAD2FDF21D6C76800273470 /* TuvioServerTests.xctest */,
+				CD16165221E0201300BBC50C /* TuvioMacOSServer.framework */,
+				CD16165A21E0201300BBC50C /* TuvioMacOSServerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +153,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		CD16164F21E0201300BBC50C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD16166221E0201300BBC50C /* TuvioMacOSServer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDAD2FD321D6C76800273470 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +172,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		CD16165121E0201300BBC50C /* TuvioMacOSServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD16166321E0201300BBC50C /* Build configuration list for PBXNativeTarget "TuvioMacOSServer" */;
+			buildPhases = (
+				CD16164D21E0201300BBC50C /* Sources */,
+				CD16164E21E0201300BBC50C /* Frameworks */,
+				CD16164F21E0201300BBC50C /* Headers */,
+				CD16165021E0201300BBC50C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TuvioMacOSServer;
+			productName = TuvioMacOSServer;
+			productReference = CD16165221E0201300BBC50C /* TuvioMacOSServer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CD16165921E0201300BBC50C /* TuvioMacOSServerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD16166621E0201300BBC50C /* Build configuration list for PBXNativeTarget "TuvioMacOSServerTests" */;
+			buildPhases = (
+				CD16165621E0201300BBC50C /* Sources */,
+				CD16165721E0201300BBC50C /* Frameworks */,
+				CD16165821E0201300BBC50C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD16165D21E0201300BBC50C /* PBXTargetDependency */,
+			);
+			name = TuvioMacOSServerTests;
+			productName = TuvioMacOSServerTests;
+			productReference = CD16165A21E0201300BBC50C /* TuvioMacOSServerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CDAD2FD521D6C76800273470 /* TuvioServer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDAD2FEA21D6C76800273470 /* Build configuration list for PBXNativeTarget "TuvioServer" */;
@@ -157,6 +254,12 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = 20eml5;
 				TargetAttributes = {
+					CD16165121E0201300BBC50C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					CD16165921E0201300BBC50C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					CDAD2FD521D6C76800273470 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
@@ -180,11 +283,27 @@
 			targets = (
 				CDAD2FD521D6C76800273470 /* TuvioServer */,
 				CDAD2FDE21D6C76800273470 /* TuvioServerTests */,
+				CD16165121E0201300BBC50C /* TuvioMacOSServer */,
+				CD16165921E0201300BBC50C /* TuvioMacOSServerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CD16165021E0201300BBC50C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD16165821E0201300BBC50C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDAD2FD421D6C76800273470 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,6 +321,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CD16164D21E0201300BBC50C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD16165621E0201300BBC50C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD16166021E0201300BBC50C /* TuvioMacOSServerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDAD2FD121D6C76800273470 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +355,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CD16165D21E0201300BBC50C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD16165121E0201300BBC50C /* TuvioMacOSServer */;
+			targetProxy = CD16165C21E0201300BBC50C /* PBXContainerItemProxy */;
+		};
 		CDAD2FE221D6C76800273470 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CDAD2FD521D6C76800273470 /* TuvioServer */;
@@ -229,6 +368,100 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CD16166421E0201300BBC50C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TuvioMacOSServer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioMacOSServer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		CD16166521E0201300BBC50C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TuvioMacOSServer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioMacOSServer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		CD16166721E0201300BBC50C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TuvioMacOSServerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioMacOSServerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		CD16166821E0201300BBC50C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TuvioMacOSServerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioMacOSServerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		CDAD2FE821D6C76800273470 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -439,6 +672,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD16166321E0201300BBC50C /* Build configuration list for PBXNativeTarget "TuvioMacOSServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD16166421E0201300BBC50C /* Debug */,
+				CD16166521E0201300BBC50C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD16166621E0201300BBC50C /* Build configuration list for PBXNativeTarget "TuvioMacOSServerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD16166721E0201300BBC50C /* Debug */,
+				CD16166821E0201300BBC50C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CDAD2FD021D6C76800273470 /* Build configuration list for PBXProject "TuvioServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
