@@ -10,10 +10,11 @@
 		CD16165B21E0201300BBC50C /* TuvioMacOSServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD16165221E0201300BBC50C /* TuvioMacOSServer.framework */; };
 		CD16166021E0201300BBC50C /* TuvioMacOSServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16165F21E0201300BBC50C /* TuvioMacOSServerTests.swift */; };
 		CD16166221E0201300BBC50C /* TuvioMacOSServer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD16165421E0201300BBC50C /* TuvioMacOSServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD816D5821DEE2B000EE5A47 /* TuvioServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */; };
 		CDAD2FE021D6C76800273470 /* TuvioServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAD2FD621D6C76800273470 /* TuvioServer.framework */; };
 		CDAD2FE521D6C76800273470 /* TuvioServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD2FE421D6C76800273470 /* TuvioServerTests.swift */; };
 		CDAD2FE721D6C76800273470 /* TuvioServer.h in Headers */ = {isa = PBXBuildFile; fileRef = CDAD2FD921D6C76800273470 /* TuvioServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDD9A7D921E022C8001390B2 /* TuvioServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */; };
+		CDD9A7E921E023B6001390B2 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD9A7E221E023AC001390B2 /* Socket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,34 @@
 			remoteGlobalIDString = CDAD2FD521D6C76800273470;
 			remoteInfo = TuvioServer;
 		};
+		CDD9A7E121E023AC001390B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDD9A7DA21E023AC001390B2 /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C0F4BF61C4E84CC008B2B0A;
+			remoteInfo = Socket;
+		};
+		CDD9A7E321E023AC001390B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDD9A7DA21E023AC001390B2 /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CC36E021C4EA1BE00BAA659;
+			remoteInfo = "Socket-iOS";
+		};
+		CDD9A7E521E023AC001390B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDD9A7DA21E023AC001390B2 /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C5FEE9B1FC319F7002F4CAA;
+			remoteInfo = "Socket-tvOS";
+		};
+		CDD9A7E721E023AC001390B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDD9A7DA21E023AC001390B2 /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CA9B1631C98A00400E607FB;
+			remoteInfo = SocketTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +76,7 @@
 		CDAD2FDF21D6C76800273470 /* TuvioServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuvioServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAD2FE421D6C76800273470 /* TuvioServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioServerTests.swift; sourceTree = "<group>"; };
 		CDAD2FE621D6C76800273470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDD9A7DA21E023AC001390B2 /* BlueSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueSocket.xcodeproj; path = "../../../../Downloads/BlueSocket-master 2/BlueSocket.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD9A7E921E023B6001390B2 /* Socket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +117,7 @@
 		CD16165321E0201300BBC50C /* TuvioMacOSServer */ = {
 			isa = PBXGroup;
 			children = (
+				CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */,
 				CD16165421E0201300BBC50C /* TuvioMacOSServer.h */,
 				CD16165521E0201300BBC50C /* Info.plist */,
 			);
@@ -104,6 +136,7 @@
 		CD5D4F4721E00F1A0083DE96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDD9A7DA21E023AC001390B2 /* BlueSocket.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,7 +167,6 @@
 		CDAD2FD821D6C76800273470 /* TuvioServer */ = {
 			isa = PBXGroup;
 			children = (
-				CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */,
 				CDAD2FD921D6C76800273470 /* TuvioServer.h */,
 				CDAD2FDA21D6C76800273470 /* Info.plist */,
 			);
@@ -148,6 +180,17 @@
 				CDAD2FE621D6C76800273470 /* Info.plist */,
 			);
 			path = TuvioServerTests;
+			sourceTree = "<group>";
+		};
+		CDD9A7DB21E023AC001390B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDD9A7E221E023AC001390B2 /* Socket.framework */,
+				CDD9A7E421E023AC001390B2 /* Socket.framework */,
+				CDD9A7E621E023AC001390B2 /* Socket.framework */,
+				CDD9A7E821E023AC001390B2 /* SocketTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +322,12 @@
 			mainGroup = CDAD2FCC21D6C76800273470;
 			productRefGroup = CDAD2FD721D6C76800273470 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CDD9A7DB21E023AC001390B2 /* Products */;
+					ProjectRef = CDD9A7DA21E023AC001390B2 /* BlueSocket.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CDAD2FD521D6C76800273470 /* TuvioServer */,
@@ -288,6 +337,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CDD9A7E221E023AC001390B2 /* Socket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Socket.framework;
+			remoteRef = CDD9A7E121E023AC001390B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CDD9A7E421E023AC001390B2 /* Socket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Socket.framework;
+			remoteRef = CDD9A7E321E023AC001390B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CDD9A7E621E023AC001390B2 /* Socket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Socket.framework;
+			remoteRef = CDD9A7E521E023AC001390B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CDD9A7E821E023AC001390B2 /* SocketTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SocketTests.xctest;
+			remoteRef = CDD9A7E721E023AC001390B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CD16165021E0201300BBC50C /* Resources */ = {
@@ -325,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD9A7D921E022C8001390B2 /* TuvioServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD816D5821DEE2B000EE5A47 /* TuvioServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +505,7 @@
 		CD16166721E0201300BBC50C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -445,6 +526,7 @@
 		CD16166821E0201300BBC50C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -636,7 +718,6 @@
 		CDAD2FEE21D6C76800273470 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TuvioServerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -654,7 +735,6 @@
 		CDAD2FEF21D6C76800273470 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TuvioServerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

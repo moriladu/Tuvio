@@ -11,3 +11,9 @@ import TuvioMacOSServer
 
 print("Hello, World!")
 
+let port = 1337
+let server = EchoServer(port: port)
+print("Swift Echo Server Sample")
+print("Connect with a command line window by entering 'telnet ::1 \(port)'")
+
+server.run()

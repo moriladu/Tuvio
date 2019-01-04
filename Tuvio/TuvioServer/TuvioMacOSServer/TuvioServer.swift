@@ -18,7 +18,7 @@ import Foundation
 import Socket
 import Dispatch
 
-class EchoServer {
+public class EchoServer {
     
     static let quitCommand: String = "QUIT"
     static let shutdownCommand: String = "SHUTDOWN"
@@ -30,7 +30,7 @@ class EchoServer {
     var connectedSockets = [Int32: Socket]()
     let socketLockQueue = DispatchQueue(label: "com.ibm.serverSwift.socketLockQueue")
     
-    init(port: Int) {
+    public init(port: Int) {
         self.port = port
     }
     
@@ -42,7 +42,7 @@ class EchoServer {
         self.listenSocket?.close()
     }
     
-    func run() {
+    public func run() {
         
         let queue = DispatchQueue.global(qos: .userInteractive)
         

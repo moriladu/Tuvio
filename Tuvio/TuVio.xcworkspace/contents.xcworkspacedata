@@ -7,7 +7,4 @@
    <FileRef
       location = "group:TuvioServer/TuvioServer.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:ServerMonitor/ServerMonitor.xcodeproj">
-   </FileRef>
 </Workspace>
