@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD816D5821DEE2B000EE5A47 /* TuvioServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */; };
 		CDAD2FE021D6C76800273470 /* TuvioServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAD2FD621D6C76800273470 /* TuvioServer.framework */; };
 		CDAD2FE521D6C76800273470 /* TuvioServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD2FE421D6C76800273470 /* TuvioServerTests.swift */; };
 		CDAD2FE721D6C76800273470 /* TuvioServer.h in Headers */ = {isa = PBXBuildFile; fileRef = CDAD2FD921D6C76800273470 /* TuvioServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioServer.swift; sourceTree = "<group>"; };
 		CDAD2FD621D6C76800273470 /* TuvioServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAD2FD921D6C76800273470 /* TuvioServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuvioServer.h; sourceTree = "<group>"; };
 		CDAD2FDA21D6C76800273470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		CDAD2FD821D6C76800273470 /* TuvioServer */ = {
 			isa = PBXGroup;
 			children = (
+				CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */,
 				CDAD2FD921D6C76800273470 /* TuvioServer.h */,
 				CDAD2FDA21D6C76800273470 /* Info.plist */,
 			);
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					CDAD2FD521D6C76800273470 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					CDAD2FDE21D6C76800273470 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD816D5821DEE2B000EE5A47 /* TuvioServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +344,7 @@
 		CDAD2FEB21D6C76800273470 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cs.williams.edu.TuvioServer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +370,7 @@
 		CDAD2FEC21D6C76800273470 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +395,7 @@
 		CDAD2FEE21D6C76800273470 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TuvioServerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +413,7 @@
 		CDAD2FEF21D6C76800273470 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TuvioServerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
