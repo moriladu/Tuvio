@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD5D4F5D21E0166C0083DE96 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5D4F5621E0165A0083DE96 /* Socket.framework */; };
 		CD816D5821DEE2B000EE5A47 /* TuvioServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */; };
 		CDAD2FE021D6C76800273470 /* TuvioServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAD2FD621D6C76800273470 /* TuvioServer.framework */; };
 		CDAD2FE521D6C76800273470 /* TuvioServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD2FE421D6C76800273470 /* TuvioServerTests.swift */; };
@@ -15,34 +14,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CD5D4F5521E0165A0083DE96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8C0F4BF61C4E84CC008B2B0A;
-			remoteInfo = Socket;
-		};
-		CD5D4F5721E0165A0083DE96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8CC36E021C4EA1BE00BAA659;
-			remoteInfo = "Socket-iOS";
-		};
-		CD5D4F5921E0165A0083DE96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8C5FEE9B1FC319F7002F4CAA;
-			remoteInfo = "Socket-tvOS";
-		};
-		CD5D4F5B21E0165A0083DE96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8CA9B1631C98A00400E607FB;
-			remoteInfo = SocketTests;
-		};
 		CDAD2FE121D6C76800273470 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDAD2FCD21D6C76800273470 /* Project object */;
@@ -53,7 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueSocket.xcodeproj; path = "../../../../Downloads/BlueSocket-master/BlueSocket.xcodeproj"; sourceTree = "<group>"; };
 		CD816D5721DEE2B000EE5A47 /* TuvioServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuvioServer.swift; sourceTree = "<group>"; };
 		CDAD2FD621D6C76800273470 /* TuvioServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TuvioServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAD2FD921D6C76800273470 /* TuvioServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuvioServer.h; sourceTree = "<group>"; };
@@ -68,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5D4F5D21E0166C0083DE96 /* Socket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,20 +55,8 @@
 		CD5D4F4721E00F1A0083DE96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CD5D4F4F21E0165A0083DE96 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CD5D4F5621E0165A0083DE96 /* Socket.framework */,
-				CD5D4F5821E0165A0083DE96 /* Socket.framework */,
-				CD5D4F5A21E0165A0083DE96 /* Socket.framework */,
-				CD5D4F5C21E0165A0083DE96 /* SocketTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CDAD2FCC21D6C76800273470 = {
@@ -219,12 +176,6 @@
 			mainGroup = CDAD2FCC21D6C76800273470;
 			productRefGroup = CDAD2FD721D6C76800273470 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CD5D4F4F21E0165A0083DE96 /* Products */;
-					ProjectRef = CD5D4F4E21E0165A0083DE96 /* BlueSocket.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CDAD2FD521D6C76800273470 /* TuvioServer */,
@@ -232,37 +183,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CD5D4F5621E0165A0083DE96 /* Socket.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Socket.framework;
-			remoteRef = CD5D4F5521E0165A0083DE96 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5D4F5821E0165A0083DE96 /* Socket.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Socket.framework;
-			remoteRef = CD5D4F5721E0165A0083DE96 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5D4F5A21E0165A0083DE96 /* Socket.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Socket.framework;
-			remoteRef = CD5D4F5921E0165A0083DE96 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CD5D4F5C21E0165A0083DE96 /* SocketTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SocketTests.xctest;
-			remoteRef = CD5D4F5B21E0165A0083DE96 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CDAD2FD421D6C76800273470 /* Resources */ = {
