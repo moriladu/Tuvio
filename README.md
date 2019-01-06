@@ -1,3 +1,3 @@
 # Tuvio
 
-## Deprecated and Replaced By Online Tutoring Platform
+## Deprecated and Replaced By Pluto
